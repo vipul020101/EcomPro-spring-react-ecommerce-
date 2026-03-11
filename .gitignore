@@ -1,0 +1,23 @@
+# env
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Java / Maven
+**/target/
+*.log
+
+# Node
+**/node_modules/
+**/dist/
+**/build/
+**/.vite/
+
+# OS
+.DS_Store
+Thumbs.db

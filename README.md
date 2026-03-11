@@ -6,7 +6,7 @@ This is a full-stack e-commerce app:
 
 ## Folders
 - Backend: `C:\downloads\ecom-proj\ecom-proj`
-- Frontend: `C:\downloads\ecom-frontend-4-main\ecom-frontend-4-main`
+- Frontend: `C:\downloads\ecom-proj\frontend`
 
 ## Quick Start (Dev)
 
@@ -21,7 +21,7 @@ Backend: `http://localhost:8080`
 
 ### 2) Start frontend
 ```powershell
-cd C:\downloads\ecom-frontend-4-main\ecom-frontend-4-main
+cd C:\downloads\ecom-proj\frontend
 npm install
 npm run dev
 ```

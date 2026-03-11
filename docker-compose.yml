@@ -30,7 +30,7 @@ services:
 
   web:
     build:
-      context: ../ecom-frontend-4-main/ecom-frontend-4-main
+      context: ./frontend
     depends_on:
       - backend
     ports:
