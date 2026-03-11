@@ -1,0 +1,6 @@
+#FileLock
+#Wed Mar 11 11:48:04 PDT 2026
+hostName=VIPUL-G5.lan
+id=19cde3a31f93d793c50564e6591b01715ce8befb74a
+method=file
+server=192.168.86.34\:65195

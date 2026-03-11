@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ecom
+      POSTGRES_USER: ecom
+      POSTGRES_PASSWORD: ecom
+    ports:
+      - "5432:5432"
+    volumes:
+      - ecom_pg:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./ecom-proj
+    depends_on:
+      - db
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/ecom
+      DB_DRIVER: org.postgresql.Driver
+      DB_USER: ecom
+      DB_PASSWORD: ecom
+      FLYWAY_ENABLED: "true"
+      JPA_DDL_AUTO: validate
+      H2_CONSOLE_ENABLED: "false"
+      JWT_SECRET: change-me-to-a-long-random-secret-32chars-min
+      JPA_SHOW_SQL: "false"
+    ports:
+      - "8080:8080"
+
+  web:
+    build:
+      context: ../ecom-frontend-4-main/ecom-frontend-4-main
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  ecom_pg:
